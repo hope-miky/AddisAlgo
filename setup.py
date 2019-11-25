@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="AddisAlgo",
-    version="0.0.1",
+    version="0.1",
     author="Tesfamichael Molla Ali",
     author_email="hope.miky1074@gmail.com",
     description="Algorithm library for python",
