@@ -8,15 +8,21 @@ class stackClass:
         return True if self.top == -1 else  False 
 
     def isFull(self):
-        return True if self.top == self.size else  False 
+        return True if self.top == self.size -1 else  False 
 
     def pop(self):
-        if !isEmppty()
-        self.top -= 1
-        return top
+        if self.isEmpty() != True:
+            self.top -= 1
+            return self.top
+        else:
+            print("The stack is empty, No more vlaues to pop", "\n")
+            return False
 
     def push(self, value):
-        self.top += 1
-        self.source[self.top] = value
+        if self.isFull() != True:
+            self.top += 1
+            self.source[self.top] = value
+        else:
+            print("The stack is full, cannot accept anymore values", "\n")
 
     

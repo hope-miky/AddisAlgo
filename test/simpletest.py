@@ -20,6 +20,26 @@ class simpleTestClass:
 
         self.stack.push(4)
 
+        self.stack.push(5)
+
+        self.stack.push(6)
+
+        self.stack.push(7)
+
+        self.stack.push(8)
+
+        self.stack.pop()
+
+        self.stack.pop()
+
+        self.stack.pop()
+
+        self.stack.push(7)
+
+        self.stack.push(6)
+
+        self.stack.push(5)
+
         print(self.stack.source, ' ', self.stack.isEmpty())
 
 
