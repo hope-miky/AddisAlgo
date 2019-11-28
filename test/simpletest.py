@@ -1,7 +1,7 @@
 import sys
 sys.path.append('~/Documents/GitHub/AddisAlgo/')
 
-from samples import stack
+from AddisAlgo import stack, queue
 
 class simpleTestClass:
     def __init__(self):
@@ -41,10 +41,55 @@ class simpleTestClass:
         self.stack.push(5)
 
         print(self.stack.source, ' ', self.stack.isEmpty())
+    
+
+    def testQueue(self):
+        self.queue = queue.queueClass(7)
+
+        print(self.queue.isFull())
+
+        print(self.queue.isEmpty())
+
+        print("sourse array = ", self.queue.source, "\n")
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+
+        self.queue.enqueue(1)
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
+        
+        self.queue.enqueue(2)
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
+
+        self.queue.enqueue(3)
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
+
+        self.queue.enqueue(4)
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
+
+        self.queue.enqueue(5)
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
+
+        self.queue.dequeue()
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
 
 
+        self.queue.dequeue()
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
 
 
 if __name__ == '__main__':
     obj = simpleTestClass()
-    obj.testStack()
+    obj.testQueue()

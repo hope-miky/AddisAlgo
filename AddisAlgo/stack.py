@@ -13,16 +13,18 @@ class stackClass:
     def pop(self):
         if self.isEmpty() != True:
             self.top -= 1
-            return self.top
+            return self.source[self.top + 1]
         else:
             print("The stack is empty, No more vlaues to pop", "\n")
-            return False
+            return None
 
     def push(self, value):
         if self.isFull() != True:
             self.top += 1
             self.source[self.top] = value
+            return True
         else:
             print("The stack is full, cannot accept anymore values", "\n")
+            return None
 
     
