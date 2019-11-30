@@ -12,15 +12,22 @@ class queueClass:
         return True if ((self.front - self.rear > 0) or (self.rear - self.front == len(self.source) -1)) else  False 
 
     def dequeue(self):
+        
         if self.isEmpty() != True:
+            if self.front == self.size -1:
+                self.front = -1
             self.front += 1
             return self.source[self.front - 1]
         else:
             print("The Queue is empty, No more vlaues to dequeue", "\n")
             return None
+        
 
     def enqueue(self, value):
+        
         if self.isFull() != True:
+            if self.rear == self.size -1:
+                self.rear = -1
             if self.isEmpty() == True:
                 self.front += 1
             self.rear += 1

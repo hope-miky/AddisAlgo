@@ -78,6 +78,16 @@ class simpleTestClass:
         print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
         print("sourse array = ",self.queue.source, "\n")
 
+        self.queue.enqueue(6)
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
+
+        self.queue.enqueue(7)
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
+
         self.queue.dequeue()
 
         print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
@@ -89,6 +99,15 @@ class simpleTestClass:
         print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
         print("sourse array = ",self.queue.source, "\n")
 
+        self.queue.enqueue(9)
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
+
+        self.queue.enqueue(9)
+
+        print("front = {}, rear = {} ".format(self.queue.front, self.queue.rear), "\n")
+        print("sourse array = ",self.queue.source, "\n")
 
 if __name__ == '__main__':
     obj = simpleTestClass()
