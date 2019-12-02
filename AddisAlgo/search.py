@@ -14,22 +14,27 @@ class search:
         
         return self.val
 
-        
+
     def Binary(self, value, source):
         self.last = len(source) - 1
         self.mid = self.midFinder(self.first, self.last)
+        
         while value != source[self.mid]:
-            if value > source[self.mid]:
-                self.first = self.mid + 1
-                self.mid = self.midFinder(self.first, self.last)
-            elif value < source[self.mid]:
-                self.last = self.mid -1
-                self.mid = self.midFinder(self.first, self.last)
+
             if self.first == self.mid:
                 print("Item not found")
                 return None
 
+            if value > source[self.mid]:
+                self.first = self.mid + 1
+                self.mid = self.midFinder(self.first, self.last)
+
+            elif value < source[self.mid]:
+                self.last = self.mid -1
+                self.mid = self.midFinder(self.first, self.last)
+                
         return self.mid
+
     def midFinder(self, f, l):
-        return self.first + (l-f)/2
+        return int(self.first + (l-f)/2)
          
