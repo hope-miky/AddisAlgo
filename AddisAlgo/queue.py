@@ -1,3 +1,10 @@
+'''
+Implementation of Queue for AdisAlgo 
+The class consists of 
+                    - Enqueue
+                    - Dequeue
+'''
+
 class queueClass:
     def __init__(self, size):
         self.size = size
@@ -5,12 +12,14 @@ class queueClass:
         self.front = -1
         self.rear = -1
 
+    # Check if the queue is empty  
     def isEmpty(self):
         return True if self.front == -1 else  False 
-
+    # Check if the queue is full 
     def isFull(self):
         return True if ((self.front - self.rear > 0) or (self.rear - self.front == len(self.source) -1)) else  False 
 
+    # Dequeue from a queue
     def dequeue(self):
         
         if self.isEmpty() != True:
@@ -22,7 +31,7 @@ class queueClass:
             print("The Queue is empty, No more vlaues to dequeue", "\n")
             return None
         
-
+    # Enqueue an element to the queue
     def enqueue(self, value):
         
         if self.isFull() != True:
