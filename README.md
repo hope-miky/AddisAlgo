@@ -7,7 +7,8 @@ AddisAlgo is python library to implement various algorithms and datastructures. 
 * Binary Search
 * Bubble Sort
   
-## Stack
+Stack
+---------
 The stack class will help implement the stack datatructure in user friendly way. The class consists 4 methods. In order to use the stack method we can import it  like this.
 ```python
 from AddisAlgo import stack
@@ -40,6 +41,16 @@ def pop(self):
             return None
 ```
 The pop method checks if the stack/array is empty and if not it will pop a value from the array, return that value and update the top index. In order to use it we can use something like this:
-```
+```python
         stack.pop()
 ```
+#### isEmpty and isFull
+Methods to check if the stack is empty and Full.
+```python
+def isEmpty(self):
+        return True if self.top == -1 else  False 
+
+def isFull(self):
+    return True if self.top == self.size -1 else  False 
+```
+
