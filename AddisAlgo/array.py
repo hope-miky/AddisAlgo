@@ -34,7 +34,8 @@ class Array:
         else:
             self.curindex = 0
             raise StopIteration 
-
+    
+    # Artimatic operations 
     def __add__(self, other):
         for i in range(self._size):
             self.values[i] = self.values[i] + other
@@ -82,6 +83,23 @@ class Array:
         return self.values
 
     # Type Convetion methods 
+
+    def __int__(self):
+        for i in range(self._size):
+            self.values[i] = int(self.values[i])
+        return self.values
+    
+    def __float__(self):
+        for i in range(self._size):
+            self.values[i] = float(self.values[i])
+        return self.values
+    
+    def __str__(self):
+        for i in range(self._size):
+            self.values[i] = str(self.values[i])
+        return self.values
+
+
 
 if __name__ == '__main__':
     ar = Array(6)
