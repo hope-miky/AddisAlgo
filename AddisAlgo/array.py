@@ -73,6 +73,7 @@ class Array:
         return self.values
 
     def __mod__(self, other):
+        assert isinstance(a, int) 
         for i in range(self._size):
             self.values[i] = self.values[i] % other
         return self.values
@@ -109,9 +110,12 @@ if __name__ == '__main__':
     ar[3] = 3
     ar[4] = 4
     ar[5] = 5
+    arr = [1,2,3,4,5,6,7,8]
+    a =5
     for i in ar:
         print(i)
     2 + ar
 
     for i in ar:
         print(i)
+    print( a in ar)
